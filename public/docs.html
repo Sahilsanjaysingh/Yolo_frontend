@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Documentation</title>
+  <style>
+    body { font-family: Inter, ui-sans-serif, system-ui; background: #0b1220; color: #dbe6ff; padding: 40px }
+    .container{ max-width:900px; margin:0 auto }
+    h1{ color:#8b5cf6 }
+    pre{ background:#071028; padding:16px; border-radius:8px; overflow:auto }
+    a.btn{ display:inline-block; padding:12px 20px; background:#7c3aed; color:white; border-radius:8px; text-decoration:none }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Safety Object Detection — Documentation</h1>
+    <p>Welcome — this documentation includes endpoints for the demo backend and integration examples.</p>
+
+    <h2>API</h2>
+    <h3>POST /api/upload</h3>
+    <p>multipart/form-data with <code>file</code> field. Returns image document with <code>url</code>.</p>
+
+    <h3>GET /api/images</h3>
+    <p>List image metadata.</p>
+
+    <h3>POST /api/chat</h3>
+    <p>Proxy to Gemini. JSON body: <code>{ "message": "..." }</code>. Set <code>GEMINI_API_KEY</code> in backend <code>.env</code>.</p>
+
+    <h2>Frontend integration</h2>
+    <pre>
+// Example upload (fetch)
+const form = new FormData();
+form.append('file', file);
+await fetch('http://localhost:4000/api/upload', { method:'POST', body: form });
+    </pre>
+
+    <p><a class="btn" href="/">Back to app</a></p>
+  </div>
+</body>
+</html>

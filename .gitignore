@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.env
+backend/.env
+uploads/
+*.log
+/.idea
+.vscode
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
+node_modules
